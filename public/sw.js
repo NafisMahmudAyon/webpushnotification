@@ -38,7 +38,10 @@ self.addEventListener('push', (event) => {
     icon: payload.icon || 'https://cdn-icons-png.flaticon.com/512/3602/3602145.png',
     badge: payload.badge || 'https://cdn-icons-png.flaticon.com/512/3602/3602145.png',
     image: payload.image || undefined,
-    vibrate: payload.vibrate || [100, 50, 100],
+    vibrate: payload.vibrate || [200, 100, 200, 100, 200],
+    requireInteraction: true, // Keep notification pop-up banner on screen until user interacts
+    renotify: true,           // Pop up banner and vibrate even if a previous notification exists
+    tag: payload.tag || 'push-alert-' + Date.now(), // Unique tag forces a fresh heads-up pop
     data: {
       url: payload.url || '/',
       dateOfArrival: Date.now()
