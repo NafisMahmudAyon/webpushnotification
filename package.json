@@ -1,0 +1,23 @@
+{
+  "name": "web-push-notification-react",
+  "version": "1.0.0",
+  "description": "All-in-One Web Push Notification Dashboard with React, Vercel Serverless Functions, and MongoDB Atlas",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-keys": "node -e \"const webpush = require('web-push'); const keys = webpush.generateVAPIDKeys(); console.log('\\nVAPID Keys Generated:'); console.log('VAPID_PUBLIC_KEY=' + keys.publicKey); console.log('VAPID_PRIVATE_KEY=' + keys.privateKey + '\\n');\""
+  },
+  "dependencies": {
+    "lucide-react": "^0.378.0",
+    "mongoose": "^8.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "dotenv": "^16.4.5",
+    "vite": "^5.2.11"
+  }
+}
